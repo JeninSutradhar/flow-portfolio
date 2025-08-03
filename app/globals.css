@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body {
+  color: white;
+  font-family: var(--font-plus-jakarta);
+}
+
+/* Custom glow for buttons */
+.button-glow {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08), 0 0 10px rgba(255, 255, 255, 0.1) inset;
+}
+.button-glow:hover {
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.15), 0 0 20px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Landscape Project Cards */
+.project-card-landscape {
+  transform-style: preserve-3d;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.project-card-landscape:hover {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 80px
+    rgba(255, 255, 255, 0.1);
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize transforms and animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .project-card-landscape:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+/* Optimize hover states */
+.group:hover .group-hover\:scale-102 {
+  transform: scale(1.02);
+}
+
+/* Smooth scrolling optimization */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent layout shifts */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-grid-background {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  animation: bg-pan 20s linear infinite;
+}
+
+@keyframes bg-pan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -40px -40px;
+  }
+}
