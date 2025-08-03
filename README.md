@@ -57,43 +57,57 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 
   
 
-## 🚀 Quick Start
+### 🚀 Quick Start
 
-  
+Follow these steps to get your portfolio up and running:
 
-1. **Clone the repository**
+---
 
-   ```
-   git clone https://github.com/JeninSutradhar/flow-portfolio.git
-   ```
-   
-   ```
-   cd flow-portfolio
-   ```
-2. **Install dependencies**
+### 1. Clone the Repository
 
-   ```
-   npm install
-   ```
+```bash
+git clone https://github.com/JeninSutradhar/flow-portfolio.git
+cd flow-portfolio
+````
 
-4. **Customize your content**
-   - Edit `site.config.ts` with your personal information
-   - Replace images in `/public` folder
-   - Update project data in components
+---
 
-5. **Run development server**
+### 2. Install Dependencies
 
-   ```
-   npm run dev
-   ```
+```bash
+npm install
+```
 
-7. **Build for production**
+---
 
-   ```
-   npm run build
-   ```
+### 3. Customize Your Content
 
-  
+* Edit `site.config.ts` to add your personal information.
+* Replace images in the `/public` directory.
+* Update project details inside the components as needed.
+
+---
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+```
+
+> Your site will be available at `http://localhost:3000`
+
+---
+
+### 5. Build for Production
+
+```bash
+npm run build
+```
+
+> Then run it with `npm start` or deploy to platforms like **Vercel**, **Netlify**, or your preferred hosting.
+
+---
+
 ## 📁 Project Structure
 ```
 
