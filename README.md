@@ -63,7 +63,7 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 
 1. **Clone the repository**
 
-   ```
+   ```bash
    git clone https://github.com/JeninSutradhar/flow-portfolio.git
    cd flow-portfolio
    ```
