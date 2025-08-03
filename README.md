@@ -164,27 +164,16 @@ Update the projects array in `components/projects-section.tsx`:
 ```typescript
 
 const projects = [
-
   {
-
     id: 1,
-
     title: "Your Project Name",
-
     description: "Project description",
-
     category: "Category",
-
     type: "Type",
-
     link: "https://your-project.com",
-
     image: "/path-to-image.png",
-
   },
-
   // Add more projects...
-
 ]
 
 ```
