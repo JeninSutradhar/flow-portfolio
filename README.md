@@ -3,7 +3,6 @@
   
 
 A sleek, dark-mode developer portfolio template built with Next.js and Tailwind CSS. Stop using basic templates and build your dev presence like a pro.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/514b6520-fdb3-4ae5-ac54-81bb827a457f" />
 
   
 ## Table of Contents
