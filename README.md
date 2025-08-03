@@ -177,23 +177,13 @@ const projects = [
 
 ```
 
-  
-
 ### Changing Colors
-
-  
-
 The template uses a dark theme with customizable accent colors. Modify the Tailwind config or CSS variables to change the color scheme.
 
   
-
 ### Adding Sections
-
-  
-
 Create new components in the `components/` directory and import them in `app/page.tsx`.
 
-  
 
 ## 🛠️ Tech Stack
 - **Framework**: Next.js 15
@@ -205,30 +195,13 @@ Create new components in the `components/` directory and import them in `app/pag
 
   
 ## 📄 License
-
-  
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-  
-
-
-  
 
 ## 📞 Support
-
-  
-
 If you have any questions or need help customizing the template:
-
-  
-
 - Create an issue on GitHub
-
-- Follow [@jeninsutradhar](https://twitter.com/jeninsutradhar) on Twitter
-
-  
-
+- Follow [@me](https://twitter.com/jeninsutradhar) on Twitter
 ---
 
 
