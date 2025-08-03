@@ -20,7 +20,7 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 
   
 
-## �📸 Screenshots
+## 📸 Screenshots
 
   
 
@@ -41,7 +41,7 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 
   
 
-## ✨ Features
+## Features
 
   
 
@@ -56,7 +56,7 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 
   
 
-### 🚀 Quick Start
+### Quick Start
 
 Follow these steps to get your portfolio up and running:
 
@@ -107,7 +107,7 @@ npm run build
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 
 flow-portfolio/
