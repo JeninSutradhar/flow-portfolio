@@ -11,19 +11,12 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
   
 
 - [Screenshots](#-screenshots)
-
 - [Features](#-features)
-
 - [Quick Start](#-quick-start)
-
 - [Project Structure](#-project-structure)
-
 - [Configuration](#️-configuration)
-
 - [Customization](#-customization)
-
 - [Tech Stack](#️-tech-stack)
-
 - [License](#-license)
 
   
@@ -33,30 +26,18 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
   
 
 ### Hero Section
-
 <img width="1888" height="884" alt="image" src="https://github.com/user-attachments/assets/b253b0bf-d0d0-40fd-9b29-3f861558e160" />
 
-
 ### About Section  
-
 <img width="1910" height="974" alt="image" src="https://github.com/user-attachments/assets/69aba79c-14e4-4257-9a04-744d822f779a" />
 
-  
-
 ### Skills & Experience
-
 <img width="1606" height="1008" alt="image" src="https://github.com/user-attachments/assets/d0949652-dc52-4561-b803-4da173be5d3d" />
 
-  
-
 ### Projects Showcase
-
 <img width="1389" height="778" alt="image" src="https://github.com/user-attachments/assets/abf880fd-8ff8-42a6-a296-c4f70d4d51b4" />
 
-  
-
 ### Contact Section
-
 <img width="1727" height="827" alt="image" src="https://github.com/user-attachments/assets/aa9c3435-bf56-4622-80b6-c7824e5417bd" />
 
   
@@ -66,19 +47,12 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
   
 
 - **Modern Dark Design** - Sleek, professional dark theme
-
 - **Fully Responsive** - Perfect on all devices
-
 - **Smooth Animations** - Fluid transitions and hover effects
-
 - **Fast Performance** - Optimized with Next.js 15
-
 - **SEO Optimized** - Built-in meta tags and structured data
-
 - **Easy Customization** - Simple configuration file
-
 - **TypeScript** - Type-safe development
-
 - **Tailwind CSS** - Utility-first styling
 
   
@@ -148,31 +122,18 @@ A sleek, dark-mode developer portfolio template built with Next.js and Tailwind 
 flow-portfolio/
 
 ├── app/                    # Next.js app directory
-
 │   ├── layout.tsx         # Root layout
-
 │   ├── page.tsx           # Home page
-
 │   └── projects/          # Projects page
-
 ├── components/            # React components
-
 │   ├── hero-section.tsx   # Hero section
-
 │   ├── about-section.tsx  # About section
-
 │   ├── projects-section.tsx # Projects showcase
-
 │   └── ...
-
 ├── public/               # Static assets
-
 │   ├── hero.png         # Profile image
-
 │   └── mocks/           # Project images
-
 ├── site.config.ts       # Site configuration
-
 └── README.md
 
 ```
@@ -190,21 +151,13 @@ Edit `site.config.ts` to customize your portfolio:
 ```typescript
 
 export const profile = {
-
   name: "Your Name",
-
   bio: "Your Professional Title",
-
   location: "Your Location",
-
   email: "your.email@example.com",
-
-  github: "https://github.com/yourusername",
-
+  github: "https://github.com/yourusername"
   linkedin: "https://linkedin.com/in/yourusername",
-
   twitter: "https://twitter.com/yourusername",
-
 }
 
 ```
