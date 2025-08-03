@@ -196,29 +196,14 @@ Create new components in the `components/` directory and import them in `app/pag
   
 
 ## 🛠️ Tech Stack
-
-  
-
 - **Framework**: Next.js 15
-
 - **Styling**: Tailwind CSS
-
 - **Language**: TypeScript
-
 - **Icons**: Lucide React
-
 - **Animations**: CSS Transitions
-
 - **Deployment**: Netlify/Vercel
 
   
-
-
-  
-
-  
-
-
 ## 📄 License
 
   
