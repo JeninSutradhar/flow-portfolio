@@ -1,1 +1,55 @@
+name: Engage Traffic
 
+on:
+  schedule:
+    - cron: "*/30 * * * *" # Every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  random-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate realistic update
+        run: |
+          COMMENTS=(
+            "<!-- AUTO_COMMENT_MARKER --> <!-- TODO: Refactor API fetch to use SWR -->"
+            "<!-- AUTO_COMMENT_MARKER --> <!-- NOTE: Updated deployment instructions -->"
+            "<!-- AUTO_COMMENT_MARKER --> <!-- IDEA: Add environment variable examples -->"
+            "<!-- AUTO_COMMENT_MARKER --> <!-- CHORE: Tweak section formatting for clarity -->"
+            "<!-- AUTO_COMMENT_MARKER --> <!-- FIXME: Check Next.js dynamic import usage -->"
+          )
+
+          MESSAGES=(
+            "docs: clarify intro"
+            "chore: tweak formatting"
+            "docs: update README instructions"
+            "refactor: improve code comments"
+            "fix: small typo in documentation"
+          )
+
+          RANDOM_COMMENT=${COMMENTS[$RANDOM % ${#COMMENTS[@]}]}
+          RANDOM_MESSAGE=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
+
+          # Update or add comment
+          if grep -q "<!-- AUTO_COMMENT_MARKER -->" README.md; then
+            sed -i "s|<!-- AUTO_COMMENT_MARKER -->.*|$RANDOM_COMMENT|" README.md
+          else
+            echo -e "\n$RANDOM_COMMENT" >> README.md
+          fi
+
+          # Change a random word to make it look like real edits
+          sed -i "0,/project/{s/project/application/}" README.md
+
+          echo "$RANDOM_MESSAGE" > commit_message.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -F commit_message.txt || echo "No changes to commit"
+          git push
