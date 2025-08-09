@@ -2,7 +2,7 @@ name: Engage Traffic
 
 on:
   schedule:
-    - cron: "*/30 * * * *" # Every 30 minutes
+    - cron: "*/20 * * * *" # Every 30 minutes
   workflow_dispatch:
 
 jobs:
