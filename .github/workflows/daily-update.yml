@@ -1,0 +1,28 @@
+name: Daily Random Commit
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # runs every day at 00:00 UTC
+  workflow_dispatch:       # allow manual trigger
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate random line
+        run: |
+          echo "$(date): $(openssl rand -hex 8)" >> random.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add random.txt
+          git commit -m "Daily update: $(date)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push
