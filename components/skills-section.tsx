@@ -3,12 +3,8 @@
 import { SectionSeparator } from "@/components/section-separator"
 
 const skills = [
-  "Rust",
-  "Go",
   "Python",
-  "TypeScript",
   "React",
-  "Solana",
   "Blockchain",
   "Docker",
   "Cloud",
