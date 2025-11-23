@@ -3,7 +3,10 @@ name: Daily Random Commit
 on:
   schedule:
     - cron: '0 * * * *'   # runs every day at 00:00 UTC
-  workflow_dispatch:       # allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write   # IMPORTANT: allows pushing using GITHUB_TOKEN
 
 jobs:
   update-file:
@@ -11,6 +14,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true  # allows pushing directly
 
       - name: Generate random line
         run: |
@@ -24,5 +30,7 @@ jobs:
           git commit -m "Daily update: $(date)" || echo "No changes to commit"
 
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push
+          git push origin HEAD
